@@ -803,4 +803,49 @@ header.is-scrolled .navbar {
         padding-left: 25px;
         padding-right: 25px;
     }
+}/* OLIVE AMENITY HIGHLIGHTS */
+
+.amenity {
+    position: relative;
+    background: linear-gradient(
+        145deg,
+        rgba(126, 133, 82, 0.14),
+        rgba(250, 249, 245, 0.95) 65%
+    );
+    border: 1px solid rgba(93, 103, 61, 0.35);
+    border-top: 4px solid #7e8552;
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.amenity:hover {
+    transform: translateY(-5px);
+    background: #eef0e4;
+    box-shadow: 0 16px 35px rgba(37, 53, 44, 0.12);
+}
+
+.amenity span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #7e8552;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+}
+
+.amenity h3 {
+    color: #35452f;
+}
+
+.amenity p {
+    color: #626b5d;
 }
