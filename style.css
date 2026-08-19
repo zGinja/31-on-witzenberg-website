@@ -1011,6 +1011,7 @@ header.is-scrolled .navbar {
         animation: none;
         display: none;
     }
+     }
 /* Final visible badge animation override */
 
 .review-badge {
