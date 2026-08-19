@@ -1011,4 +1011,53 @@ header.is-scrolled .navbar {
         animation: none;
         display: none;
     }
+}/* Final visible badge animation override */
+
+.review-badge {
+    top: 50%;
+    left: 0;
+    opacity: 1 !important;
+    animation: badge-visible-pass 10s linear infinite !important;
+}
+
+@keyframes badge-visible-pass {
+    0% {
+        left: 0;
+        opacity: 1;
+        transform: translateY(-50%) rotate(-8deg);
+    }
+
+    70% {
+        left: calc(100% - 130px);
+        opacity: 1;
+        transform: translateY(-50%) rotate(8deg);
+    }
+
+    100% {
+        left: calc(100% - 130px);
+        opacity: 1;
+        transform: translateY(-50%) rotate(8deg);
+    }
+}
+
+@media (max-width: 700px) {
+    @keyframes badge-visible-pass {
+        0% {
+            left: 0;
+            opacity: 1;
+            transform: translateY(-50%) rotate(-8deg);
+        }
+
+        70% {
+            left: calc(100% - 95px);
+            opacity: 1;
+            transform: translateY(-50%) rotate(8deg);
+        }
+
+        100% {
+            left: calc(100% - 95px);
+            opacity: 1;
+            transform: translateY(-50%) rotate(8deg);
+        }
+    }
 }
