@@ -253,6 +253,11 @@ header {
     grid-template-columns: 1.1fr 0.9fr;
     gap: 100px;
     align-items: center;
+    max-width: none;
+    background: linear-gradient(135deg, #172a21 0%, #294536 58%, #355541 100%);
+    color: white;
+    padding-left: max(40px, calc((100vw - 1300px) / 2 + 40px));
+    padding-right: max(40px, calc((100vw - 1300px) / 2 + 40px));
 }
 
 .experience-image {
@@ -276,8 +281,17 @@ header {
 
 .experience-content p {
     font-family: Arial, sans-serif;
-    color: var(--muted);
+    color: #d8ddd9;
     margin-bottom: 20px;
+}
+
+.experience-content .eyebrow,
+.experience-content .text-link {
+    color: var(--sand);
+}
+
+.experience-content .text-link {
+    border-color: var(--sand);
 }
 
 .text-link {
@@ -340,7 +354,27 @@ header {
 }
 
 .gallery {
-    background: var(--cream);
+    background:
+        linear-gradient(
+            rgba(18, 38, 29, 0.76),
+            rgba(18, 38, 29, 0.84)
+        ),
+        url("images/Big view 2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    max-width: none;
+    padding-left: max(40px, calc((100vw - 1300px) / 2 + 40px));
+    padding-right: max(40px, calc((100vw - 1300px) / 2 + 40px));
+    border-top: 12px solid #294536;
+}
+
+.gallery .eyebrow {
+    color: var(--sand);
+}
+
+.gallery .section-heading h2 {
+    color: white;
 }
 
 .gallery-grid {
@@ -369,6 +403,15 @@ header {
 
 .image-four {
     background-image: url("images/main bathroom.jpg");
+}
+
+.image-five {
+    background-image: url("images/Big view 1.jpg");
+}
+
+.image-six {
+    background-image: url("images/Big view 2.jpg");
+    background-position: center 48%;
 }
 
 .reviews {
@@ -513,6 +556,17 @@ footer p {
     .experience {
         grid-template-columns: 1fr;
         gap: 50px;
+    }
+
+    .experience {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .gallery {
+        padding-left: 25px;
+        padding-right: 25px;
+        background-attachment: scroll;
     }
 
     .features {
@@ -676,6 +730,8 @@ header.is-scrolled .navbar {
 
 .gallery-image {
     transition: filter 250ms ease;
+    min-height: 0;
+    aspect-ratio: 3 / 2;
 }
 
 .gallery-image:hover {
@@ -683,6 +739,10 @@ header.is-scrolled .navbar {
 }
 
 @media (max-width: 900px) {
+    .gallery-image {
+        min-height: 0;
+    }
+
     .nav-links {
         position: absolute;
         top: 100%;
@@ -740,6 +800,50 @@ header.is-scrolled .navbar {
     .feature {
         padding: 38px 18px;
     }
+}
+
+/* Olive highlights for the amenities */
+
+.amenity {
+    position: relative;
+    background: linear-gradient(
+        145deg,
+        rgba(126, 133, 82, 0.16),
+        rgba(250, 249, 245, 0.96) 68%
+    );
+    border: 1px solid rgba(93, 103, 61, 0.35);
+    border-top: 4px solid #7e8552;
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.amenity:hover {
+    transform: translateY(-5px);
+    background: #eef0e4;
+    box-shadow: 0 16px 35px rgba(37, 53, 44, 0.12);
+}
+
+.amenity span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #7e8552;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+}
+
+.amenity h3 {
+    color: #35452f;
+}
+
+.amenity p {
+    color: #626b5d;
 }
 
 @media (prefers-reduced-motion: reduce) {
